@@ -1,0 +1,95 @@
+.App {
+  background-color:rgba(197, 228, 231, 1);
+  width: 100%;
+  height: 100vh;
+  font-family: 'Space Mono', monospace;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__wrapper {
+  background-color: white;
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2007);
+  width: 900px;
+  height: 481px;
+  border-radius: 30px;
+}
+input[type="text"] {
+  min-height: 44px;
+  width: 380px;
+  border: none;
+  background: rgba(243, 249, 250, 1);
+  outline: none;
+  text-align: right;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35.54px;
+  color: rgba(0, 71, 75, 1);
+  background-repeat: no-repeat;
+  background-position: 15px;
+  caret-color: rgba(38, 194, 174, 1);
+  padding-right: 0.5rem;
+}
+input::placeholder {
+  color: rgba(0, 71, 75, 0.4);
+  padding-right: 1rem;
+}
+input:focus {
+  border: 1px solid rgba(38, 194, 174, 1)
+}
+.app__inputs-bill > input {
+  background-image: url('./images/icon-dollar.svg');
+}
+.app__inputs-ppl > input {
+  background-image: url('./images/icon-person.svg');
+}
+label, .app__inputs-buttons p {
+  color: rgba(94, 122, 125, 1);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
+  text-align: left;
+}
+.app__inputs-buttons p {
+  margin: 1rem 0 0.75rem 0;
+}
+.app__inputs-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.app__inputs-buttons-container {
+  width: 380px;
+  height: 112px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.app__inputs-buttons-container > input {
+  border-radius: 10px;
+  width: 110.6px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35.54px;
+  text-align: right;
+  transition: 0.1s ease;
+  padding-right: 6.4px;
+}
+.app__inputs-buttons-container > input::placeholder{
+  color: rgba(84, 120, 120, 1);
+}
+
+
+

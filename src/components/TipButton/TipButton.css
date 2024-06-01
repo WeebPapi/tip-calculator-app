@@ -1,0 +1,24 @@
+.tipbutton .tipbutton-btn {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 117px;
+    height: 48px;
+    color: white;
+    background-color: rgba(0, 71, 75, 1);
+    font-family: 'Space Mono';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35.54px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.45s ease;
+}
+.tipbutton .tipbutton-btn:hover {
+    background-color: rgba(159, 232, 223, 1);
+    color: rgba(0, 71, 75, 1);
+}
+.tipbutton .tipbutton-btn:focus {
+    background-color: rgba(38, 194, 174, 1);
+    color: rgba(0, 71, 75, 1);
+}
