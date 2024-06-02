@@ -5,12 +5,27 @@ import {TipButton, CalcScreen} from './components'
 function App() {
   const [bill, setBill] = React.useState(0)
   const [tip, setTip] = React.useState(0)
-  const [numPeople, setNumPeople] = React.useState(1)
+  const [numPeople, setNumPeople] = React.useState('')
+  const [isInvalid, setIsInvalid] = React.useState(false)
+  const validationStyle = {
+    fontSize: '16px',
+    color: 'rgba(225, 116, 87, 1)',
+    position: 'absolute',
+    margin: '0',
+    bottom: '3rem',
+    left: '16.8rem',
+    width: 'max-content',
+    fontWeight: '700',
+    fontFamily: 'Space Mono'
+  }
   const handlePplChange = (e) => {
     if (parseInt(e.target.value) === 0){
-      e.target.style.border = '2px solid red'
+      setIsInvalid(true)
     }
-    setNumPeople(parseInt(e.target.value))
+    else {
+      setIsInvalid(false)
+      setNumPeople((e.target.value))
+    }
   }
 
   return (
@@ -33,11 +48,11 @@ function App() {
                 )} type='text' name='custom' placeholder='Custom'></input>
               </div>
             </div>
-            <div className='app__inputs-ppl'>
-              <p>{tip}</p>
+            <div className='app__inputs-ppl' style={{position: 'relative'}}>
             <label for='ppl'>Number of People</label><br/>
-                
-              <input type='text' id='ppl' name='ppl' placeholder='0' onChange={handlePplChange}></input>
+                {isInvalid ? <p style={validationStyle}>Can't be zero</p> : null}
+              <input type='text' value={numPeople} id='ppl' name='ppl' placeholder='0' onChange={handlePplChange} style={{border: isInvalid ? '1px solid rgba(225, 116, 87, 1)'
+ : 'inherit'}}></input>
             </div>
           </form>
         </div>
