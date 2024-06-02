@@ -5,7 +5,7 @@ const CalcScreen = ({bill, tip, numPeople, setBill, setTip, setNumPeople}) => {
   const handleReset = () => {
     setBill('')
     setTip(0)
-    setNumPeople('')
+    setNumPeople(1)
   }
   const tipAmt = tip/100*bill 
   const total = bill + tipAmt

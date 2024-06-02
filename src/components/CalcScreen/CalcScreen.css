@@ -57,3 +57,12 @@
 .calcscreen__reset > button:active {
     background-color: rgba(13, 104, 109, 1);
 }
+@media screen and (max-width:650px) {
+    .calcscreen {
+        width: 327px;
+        height: 257px;
+    }
+    .calcscreen__text_tip, .calcscreen__text_person, .calcscreen__reset > button {
+        width: 281px;
+    }
+}

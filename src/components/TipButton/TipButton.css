@@ -22,3 +22,8 @@
     background-color: rgba(38, 194, 174, 1);
     color: rgba(0, 71, 75, 1);
 }
+@media screen and (max-width: 650px) {
+    .tipbutton .tipbutton-btn {
+        width: 146.6px;
+    }
+}

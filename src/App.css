@@ -92,6 +92,66 @@ label, .app__inputs-buttons p {
 .app__inputs-buttons-container > input::placeholder{
   color: rgba(84, 120, 120, 1);
 }
+.validation-p {
+  font-size: 16px;
+  color: rgba(225, 116, 87, 1);
+  position: absolute;
+  margin: 0;
+  bottom: 3rem;
+  left: 16.8rem;
+  width: max-content;
+  font-weight: 700;
+  font-family: 'Space Mono'
+}
+@media screen and (max-width: 650px) {
+  .app__wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+    height: 790px;
+  }
+  .app__inputs {
+    width: 311px;
+    align-items: center;
+  }
+  input[type="text"] {
+    min-height: 44px;
+    width: 311px;
+    border: none;
+    background: rgba(243, 249, 250, 1);
+    outline: none;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35.54px;
+    color: rgba(0, 71, 75, 1);
+    background-repeat: no-repeat;
+    background-position: 15px;
+    caret-color: rgba(38, 194, 174, 1);
+    padding-right: 0.5rem;
+  }
+  .app__inputs-buttons-container {
+    width: 311px;
+    height: 216px;
+  }
+  .app__inputs-buttons-container > input {
+    width: 140.2px;
+  }
+  .validation-p {
+    font-size: 16px;
+    color: rgba(225, 116, 87, 1);
+    position: absolute;
+    margin: 0;
+    bottom: 3rem;
+    left: 12.5rem;
+    width: max-content;
+    font-weight: 700;
+    font-family: 'Space Mono'
+  }
+
+
+}
 
 
 
