@@ -3,9 +3,9 @@ import React from 'react';
 import {TipButton, CalcScreen} from './components'
 
 function App() {
-  const [bill, setBill] = React.useState(0)
+  const [bill, setBill] = React.useState('')
   const [tip, setTip] = React.useState(0)
-  const [numPeople, setNumPeople] = React.useState('')
+  const [numPeople, setNumPeople] = React.useState(1)
   const [isInvalid, setIsInvalid] = React.useState(false)
   const validationStyle = {
     fontSize: '16px',
@@ -35,7 +35,7 @@ function App() {
           <form>
             <div className='app__inputs-bill'>
               <label for='bill'>Bill</label><br/>
-              <input type='text' name='bill' placeholder='0' onChange={(e) => (setBill(parseFloat(e.target.value)))}></input>
+              <input value={bill} type='text' name='bill' placeholder='0' onChange={(e) => (setBill(parseFloat(e.target.value)))}></input>
             </div>
             <div className='app__inputs-buttons'>
               <p>Select Tip %</p>
@@ -56,6 +56,7 @@ function App() {
             </div>
           </form>
         </div>
+        <div className='app__calc'><CalcScreen bill={bill} setBill={setBill} tip={tip} setTip={setTip} numPeople={numPeople} setNumPeople={setNumPeople} /></div>
       </div>
     </div>
   );
