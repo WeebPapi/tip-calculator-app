@@ -19,14 +19,14 @@ const CalcScreen = ({bill, tip, numPeople, setBill, setTip, setNumPeople}) => {
             <p className='toptext'>Tip Amount</p>
             <p className='perPerson'>/ person</p>
           </div>
-          <p className='calcscreen__text-price'>${tipPerPerson? tipPerPerson : '0.00'}</p>
+          <p className='calcscreen__text-price'>${!isNaN(tipPerPerson)? tipPerPerson : '0.00'}</p>
         </div>
         <div className='calcscreen__text_person'>
           <div className='calcscreen__text_person-p'>
             <p className='toptext'>Total</p>
             <p className='perPerson'>/ person</p>
           </div>
-          <p className='calcscreen__text-price'>${totalPerPerson? totalPerPerson : '0.00'}</p>
+          <p className='calcscreen__text-price'>${!isNaN(totalPerPerson)? totalPerPerson : '0.00'}</p>
         </div>
       </div>
       <div className='calcscreen__reset'>
